@@ -1,4 +1,6 @@
 import socket
+import threading
+
 
 class TCPClient50:
     def __init__(self, ip, message_received_callback):
@@ -57,7 +59,6 @@ class Cliente50:
         thread.start()
 
         salir = "n"
-        self.sc = input()
         print("Cliente bandera 01")
         while salir != "s":
             salir = input()
