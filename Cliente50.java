@@ -5,7 +5,6 @@ import java.util.*;
 import sumaNred.TCPClient50;
 
 class Cliente50 {
-
     public double sum[] = new double[40];
     TCPClient50 mTcpClient;
     Scanner sc;
@@ -30,7 +29,6 @@ class Cliente50 {
                         mTcpClient.run();
                     }
                 }).start();
-        // ---------------------------
 
         String salir = "n";
         sc = new Scanner(System.in);
@@ -78,10 +76,10 @@ class Cliente50 {
         // System.out.println("a" + ((d * (H - 1)) + a) + "b" + (b + 1) + " i" + (H -
         // 1));
 
-        todos[H - 1] = new tarea0101(((d * (H - 1)) + a), (b), H - 1, poli, n, dif);
+        todos[H - 1] = new tarea0101(((d * (H - 1)) + a), b, (H - 1), poli, n, dif);
         todos[H - 1].start();
 
-        for (int i = 0; i <= (H - 1); i++) {// AQUI AQUI VER <=
+        for (int i = 0; i <= (H - 1); i++) {
             try {
                 todos[i].join();
             } catch (InterruptedException ex) {
